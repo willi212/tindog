@@ -1,0 +1,132 @@
+.gradient-background {
+  background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.btn-willi button {
+  position: relative;
+  /* z-index: 10; */
+  /* padding: .875rem; */
+  font-size: 1.1rem;
+  align-items: center;
+  background: #000;
+  color: white;
+  border-radius: 3px;
+  /* display: block; */
+  justify-content: center;
+  box-sizing: border-box;
+  /* height: 100% */
+}
+
+.btn-willi {
+  /* margin: 0 auto; */
+  /* width: calc(100% - 2.75rem); */
+  /* text-align: center; */
+  position: relative;
+  border-radius: 6px;
+  /* box-sizing: border-box; */
+  /* color:white !important; */
+  /* display: block; */
+  /* z-index: 2; */
+  overflow: hidden;
+  padding: 3px;
+}
+
+.btn-willi>.btn:hover {
+  background: #000;
+  color: white;
+  border-color: #000;
+}
+
+.btn-willi::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(115deg, #4fcf70, #fad648, #a767e5, #12bcfe, #44ce7b);
+  background-size: 50% 100%;
+  /* animation: gradient-animation2 .75s linear infinite; */
+}
+
+.btn-willi:hover::before{
+  animation: gradient-animation2 .75s linear infinite;
+}
+
+/* h1 {
+  background: -webkit-linear-gradient(115deg, #4fcf70, #fad648, #a767e5, #12bcfe, #44ce7b);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 3px;
+} */
+
+h1 {
+  /* --bg-size: 400%; */
+  font-family: sans-serif;
+  /* font-size: clamp(3rem, 25vmin, 8rem); */
+  /* background: linear-gradient(115deg, #4fcf70, #fad648, #a767e5, #12bcfe, #44ce7b) 0 0 / var(--bg-size) 100%; */
+  background: linear-gradient(115deg, #4fcf70, #fad648, #a767e5, #12bcfe, #44ce7b);
+  background-size: 400% 100%;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* transform: translate(-50%); */
+  /* animation: text-come-in 8s linear forwards; */
+  animation: move-bg 8s linear infinite;
+  /* animation-iteration-count: unset; */
+}
+
+@keyframes move-bg {
+  to {
+    background-position: 400% 0;
+  }
+}
+
+/* @keyframes text-come-in {
+  to {
+    transform: translateX(0);
+  }
+} */
+
+/* @media (prefers-reduced-motion: no-preference) {
+  h1 {
+    animation: move-bg 8s linear infinite;
+  }
+  @keyframes move-bg {
+    to {
+      background-position: var(--bg-size) 0;
+    }
+  }
+} */
+
+@keyframes gradient-animation2 {
+  to {
+    transform: translateX(-50%)
+  }
+}
+
+
+.icon-square {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+}
+
+.profile-img {
+  height: 100px;
+  border-radius: 50%;
+}
